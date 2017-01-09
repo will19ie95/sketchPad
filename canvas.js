@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 function create_Canvas() {
 
-
 	for (var i = 0; i < gridSize * gridSize; i++) {
 		$('#canvas').append('<div class="box outline"></div>')
 	}
@@ -24,6 +23,7 @@ function create_Canvas() {
 
 function recreate_canvas() {
 	gridSize = $('#grid_Modal #new_gridSize').val().trim();
+	$('#canvas').html('');
 	create_Canvas();
 	draw();
 }
@@ -31,7 +31,7 @@ function recreate_canvas() {
 function draw() {
 
 	$('.box').hover(function() {
-		$(this).css('background-color', '#888');
+		$(this).css('background-color', '#999');
 	})
 
 }
@@ -58,8 +58,8 @@ function clear_canvas() {
 }
 
 function getRandomColor () {
-  var hex = Math.floor(Math.random() * 0xFFFFFF);
-  return "#" + ("000000" + hex.toString(16)).substr(-6);
+  var rancomColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+  return rancomColor;
 }
 
 function outLine() {
