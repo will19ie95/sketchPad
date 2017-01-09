@@ -3,6 +3,7 @@ var gridSize = 16;
 
 $(document).ready(function() {
 	create_Canvas();
+	draw();
 })
 
 function create_Canvas() {
@@ -17,6 +18,14 @@ function create_Canvas() {
 		'width' : $('#canvas').width() / gridSize,
 	});
 
+	$('#currentSetting').replaceWith('<p id="currentSetting">Current Setting: ' + gridSize + "<p>");
+
+}
+
+function recreate_canvas() {
+	gridSize = $('#grid_Modal #new_gridSize').val().trim();
+	create_Canvas();
+	draw();
 }
 
 function draw() {

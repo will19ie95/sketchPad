@@ -25,6 +25,10 @@ body {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+.controls{
+	width: 100%;
+}
+
 .btn-group {
 	margin: 30px;
 }
