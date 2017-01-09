@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<title>Sketch Pad!</title>
 </head>
 <body>
+	<span class="title">Sketch Pad</span>
 	<div id="canvas"></div>	
-	<button onclick="draw()">Draw</button>
-	<button onclick="erase()">Erase</button>
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary" onclick="draw()">Draw</button>
+		<button type="button" class="btn btn-success" onclick="draw_color()">Draw Color</button>
+		<button type="button" class="btn btn-warning" onclick="erase()">Eraser</button>
+		<button type="button" class="btn btn-danger" onclick="clear_canvas()">Clear</button>
+	</div>
+	<button type="button" class="btn btn-default" onclick="outLine()">Toggle Grid</button>
+
 	<script src="canvas.js"></script>
 </body>
 </html>

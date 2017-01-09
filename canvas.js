@@ -1,43 +1,39 @@
+var gridSize = 16;
+
+
 $(document).ready(function() {
 	create_Canvas();
-	create_Canvas_Boxes();
 })
 
 function create_Canvas() {
 
-	var gridSize = 16;
-
-	$('#canvas').css('height', '500px').css('width', '500px').css('margin', 'auto');
 
 	for (var i = 0; i < gridSize * gridSize; i++) {
-		$('#canvas').append('<div class="box"></div>')
+		$('#canvas').append('<div class="box outline"></div>')
 	}
-
-	
-}
-
-function create_Canvas_Boxes() {
-
-	var gridSize = 16;
 
 	$('.box').css({
 		'height' : $('#canvas').height() / gridSize,
 		'width' : $('#canvas').width() / gridSize,
-		// 'height' : '31.25px',
-		// 'width' : '31.25px',
-		'border' : "1px dotted grey"
 	});
+
 }
 
 function draw() {
 
+	$('.box').hover(function() {
+		$(this).css('background-color', '#888');
+	})
+
+}
+
+function draw_color() {
 	var randomColor = getRandomColor();
 
 	$('.box').hover(function() {
 		$(this).css('background-color', randomColor);
 		randomColor = getRandomColor();
 	})
-
 }
 
 function erase() {
@@ -48,7 +44,19 @@ function erase() {
 
 }
 
+function clear_canvas() {
+	$('.box').css('background-color','white');
+}
+
 function getRandomColor () {
   var hex = Math.floor(Math.random() * 0xFFFFFF);
   return "#" + ("000000" + hex.toString(16)).substr(-6);
+}
+
+function outLine() {
+	if($('.box').hasClass('outline')) {
+		$('.box').removeClass('outline');
+	} else {
+		$('.box').addClass('outline');
+	}
 }
