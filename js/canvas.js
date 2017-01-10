@@ -3,7 +3,7 @@ var gridSize = 16;
 
 $(document).ready(function() {
 	create_Canvas();
-	draw();
+	pen();
 })
 
 function create_Canvas() {
@@ -25,7 +25,7 @@ function recreate_canvas() {
 	gridSize = $('#grid_Modal #new_gridSize').val().trim();
 	$('#canvas').html('');
 	create_Canvas();
-	draw();
+	pen();
 }
 
 function pen() {
