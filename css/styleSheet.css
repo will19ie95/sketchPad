@@ -1,6 +1,10 @@
 body {
 	text-align: center;
 	background-color: #EEE;
+	background-image: url(../images/chalkboard.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: 50%;
 }
 
 #canvas {
