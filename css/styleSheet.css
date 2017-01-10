@@ -22,7 +22,7 @@ body {
 }
 
 .outline {
-	border : 1px dotted grey;
+	border : .5px dotted grey;
 }
 
 .title {
@@ -38,4 +38,16 @@ body {
 
 .btn-group {
 	margin: 30px;
+}
+
+/*COLOR PICKER*/
+
+.color-Picker{
+	display: none;
+}
+
+.sp-replacer {
+	float: left;
+	height: 34px;
+	border: 1px solid #2e6da4;
 }

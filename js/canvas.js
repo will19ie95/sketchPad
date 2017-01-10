@@ -1,15 +1,16 @@
-var gridSize = 16;
+var gridSize = 30;
+var penColor= "#000";
 
 
 $(document).ready(function() {
 	create_Canvas();
+	init_colorPicker();
 	pen();
 })
 
 function create_Canvas() {
-
 	for (var i = 0; i < gridSize * gridSize; i++) {
-		$('#canvas').append('<div class="box outline"></div>')
+		$('#canvas').append('<div class="box"></div>')
 	}
 
 	$('.box').css({
@@ -31,7 +32,7 @@ function recreate_canvas() {
 function pen() {
 
 	$('.box').hover(function() {
-		$(this).css('background-color', '#999');
+		$(this).css('background-color', penColor);
 	})
 
 }
@@ -46,7 +47,6 @@ function crayon() {
 }
 
 function erase() {
-
 	$('.box').hover(function() {
 		$(this).css('background-color','white');
 	})
@@ -68,4 +68,14 @@ function outLine() {
 	} else {
 		$('.box').addClass('outline');
 	}
+}
+
+//SPECTRUM COLOR PICKER
+function init_colorPicker() {
+	$("#colorPicker").spectrum({
+	    color: "#000",
+	    change: function(color) {
+	        penColor = color.toHexString();
+	    }
+	});
 }

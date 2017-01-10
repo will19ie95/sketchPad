@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/canvas.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styleSheet.css">
 	<title>Sketch Pad!</title>
 </head>
 <body>
 	<span class="title">Sketch Pad</span>
 	<div id="canvas"></div>	
-
 	<div class="controls">
 		<div class="btn-group">
+			<input id="colorPicker"/>
 			<button type="button" class="btn btn-primary" onclick="pen()">Pen</button>
-			<button type="button" class="btn btn-success" onclick="crayon()">crayon</button>
+			<button type="button" class="btn btn-success" onclick="crayon()">Rainbow</button>
 			<button type="button" class="btn btn-warning" onclick="erase()">Eraser</button>
 			<button type="button" class="btn btn-danger" onclick="clear_canvas()">Clear</button>
 		</div>
@@ -24,7 +26,6 @@
 			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#grid_Modal">Grid Size</button>
 		</div>
 	</div>
-
 	<!-- MODAL -->
 	<div class="modal fade" id="grid_Modal" role="dialog">
 		<div class="modal-dialog">
