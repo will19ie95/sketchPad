@@ -28,7 +28,7 @@ function recreate_canvas() {
 	draw();
 }
 
-function draw() {
+function pen() {
 
 	$('.box').hover(function() {
 		$(this).css('background-color', '#999');
@@ -36,7 +36,7 @@ function draw() {
 
 }
 
-function draw_color() {
+function crayon() {
 	var randomColor = getRandomColor();
 
 	$('.box').hover(function() {
