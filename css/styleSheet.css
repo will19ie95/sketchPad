@@ -42,7 +42,7 @@ body {
 
 /*COLOR PICKER*/
 
-.color-Picker{
+#colorPicker{
 	display: none;
 }
 
