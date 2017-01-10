@@ -76,6 +76,7 @@ function init_colorPicker() {
 	    color: "#000",
 	    change: function(color) {
 	        penColor = color.toHexString();
+	        pen();
 	    }
 	});
 }
