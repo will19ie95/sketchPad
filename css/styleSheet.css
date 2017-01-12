@@ -21,6 +21,10 @@ body {
 	background-color: white;
 }
 
+.box:hover {
+	cursor: none;
+}
+
 .outline {
 	border : .5px dotted grey;
 }
